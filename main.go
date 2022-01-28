@@ -1,8 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"github.com/stinawest/rivercrossing"
+"rivercrossing/event"
+"fmt"
 )
 
 
+
+func main() {
+	fmt.Println("Velkommen")
+	event.Start()
+	event.CrossRiverFor()
+}
