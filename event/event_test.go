@@ -3,12 +3,10 @@
 // start() or setup(), reset() osv.
 package event
 
-import (
-	"testing"
-	"fmt"
-)
+import "testing"
 
 
+/*
 func TestPut(t *testing.T) {
     // Hva forventer jeg?
     wanted := "[kylling rev korn ---\\ \\_korn_/ _________________/---]"
@@ -18,18 +16,13 @@ func TestPut(t *testing.T) {
     }
 }
 
+*/
 
 
-
-func PutInBoat(t *testing.T) {
-	wanted := "[kylling rev korn ---\\ \\_kylling_/ _________________/---]"
-	got := PutInBoat("kylling") 
-	if got != wanted {
-			t.Errorf("Feil, fikk %q, ønsket %q", got, wanted)
+func TestPut(t *testing.T) {
+	wanted := "[kylling rev korn ---\\ \\_kylling_/ ______________/---]"
+	state := PutKy(kylling) 
+	if state != wanted {
+			t.Errorf("Feil, fikk %q, ønsket %q", state, wanted)
 	}
-}
-
-
-
-
 }
